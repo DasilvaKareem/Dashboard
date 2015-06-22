@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Chart.js 
 
 [![Build Status](https://travis-ci.org/nnnick/Chart.js.svg?branch=master)](https://travis-ci.org/nnnick/Chart.js) [![Code Climate](https://codeclimate.com/github/nnnick/Chart.js/badges/gpa.svg)](https://codeclimate.com/github/nnnick/Chart.js)
@@ -18,3 +19,6 @@ For support using Chart.js, please post questions with the [`chartjs` tag on Sta
 ## License
 
 Chart.js is available under the [MIT license](http://opensource.org/licenses/MIT).
+=======
+fe# Dashboard
+>>>>>>> 20b5a80bc31187bcfda0cefd53c3d1dc8c936f22
