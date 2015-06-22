@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Deloitte Dashboard </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <!-- Contains all the CTO landing page -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class ="deloittelogo" href="#">
+                       Deloitte Dashboard
+                    </a>
+                </li>
+                  <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Network Services</a>
+                </li>
+                <li>
+                    <a href="#">Strategy</a>
+                </li>
+                <li>
+                    <a href="#">CTO</a>
+                </li>
+                <li>
+                    <a href="#">Enterprise Applications</a>
+                </li>
+                <li>
+                    <a href="#">SLTC</a>
+                </li>
+                <li>
+                    <a href="#">Media</a>
+                </li>
+              
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <style>
+            #canvas-holder{
+                width:100%;
+            }
+        </style>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                <div class="deloitte">
+                        <div class="col-lg-12">
+                            <img src="deloitte-logo.png" width="220" height="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                    
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row 1 of grpahs -->
+       
+        <div class="container-fluid">
+            <div class="row">
+                     <!-- Graph 1 -->
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> DOughtnut Example with Tooltips</h3>
+                            </div>
+                                <div class="panel-body">
+                                    <div id="canvas-holder">
+                                        <canvas id="chart-area" width="500" height="500"/>
+                                    </div>
+                                 </div>
+                        </div>
+                    </div>
+
+                    <!-- Graph 2 -->
+                            <div class="col-md-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Line Graph Example with Tooltips</h3>
+                                    </div>
+
+                                <div class="panel-body">
+                                    <div id="canvas-holder">
+                                        <canvas id="chart-area2" width="500" height="500"/>
+                                     </div>
+                                </div>
+                             </div>
+                         </div>
+                     <!-- Graph 3 -->
+                    <div class="col-md-4">
+                        <a href="inDepth.html">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Radar Example with Tooltips</h3>
+                                </div>
+                                 <div class="panel-body">
+                                    <div id="canvas-holder">
+                                         <canvas id="chart-area4" width="500" height="500"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                     <!-- Row 2 of graphs -->
+                    <div class="row">
+                     <!-- Graph 1 -->
+                           <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                     <div class="panel-heading">
+                                        <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Bar Graph Example with Tooltips</h3>
+                                </div>
+                                    <div class="panel-body">
+                                        <div id="canvas-holder">
+                                            <canvas id="chart-area3" width="500" height="200"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Pie Graph Example with Tooltips</h3>
+                                </div>
+                                <div class="panel-body">
+                                        <div id="canvas-holder">
+                                            <canvas id="chart-area5" width="500" height="200"/>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+      <script src="Chart.js"></script>
+      <script src="js/ChartInfo.js"></script>
+    <script>
+    
+    //Loads all graphs when browsers loads file
+    window.onload = function(){
+        var ctx2 = document.getElementById("chart-area2").getContext("2d");
+        window.myLine = new Chart(ctx2).Line(lineChartData, {
+            responsive: true
+        });
+
+        var ctx = document.getElementById("chart-area").getContext("2d");
+         window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+
+        var ctx3 = document.getElementById("chart-area3").getContext("2d");
+        window.myBar = new Chart(ctx3).Bar(barChartData, {
+            responsive : true
+        });
+
+        var ctx4 = document.getElementById("chart-area4").getContext("2d");
+        window.myPolarArea = new Chart(ctx4).PolarArea(polarData, {
+        responsive:true
+                });
+
+        var ctx5 = document.getElementById("chart-area5").getContext("2d");
+        window.myPie = new Chart(ctx5).Pie(pieData);
+    }
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
